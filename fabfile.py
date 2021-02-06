@@ -7,6 +7,7 @@ env.path = '~/Sites/uglyinc'
 env.remotepath = '/home/soriamatt/apps/uglyinc'
 env.git_branch = 'main'
 env.warn_only = True
+env.forward_agent = True
 env.remote_protocol = 'http'
 
 def deploy(assets='y'):
