@@ -1,0 +1,14 @@
+// ANIMATIONS
+
+@keyframes pulse {
+  0% {
+    transform: translate(-25%, -50%) scale(0.9);
+  }
+
+  70% {
+    transform: translate(-25%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-25%, -50%) scale(0.9);
+  }
+}

@@ -1,0 +1,84 @@
+//base styles
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: color('white');
+  padding: 20px 20px 100px;
+	background: color('black');
+  font-family: 'Digestive Small', serif;
+  &.inverse {
+    .inverse-overlay {
+      display: block;
+    }
+  }
+
+  &.-cursor-active #cursor {
+    transform: translate(0, -50%) scale(1.8);
+    animation: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Digestive Two', serif;
+}
+
+a {
+	color: inherit;
+}
+
+img {
+  height: auto;
+	max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  @include clearfix();
+  padding: 0 $padding-sm;
+  max-width: $sitewrapper;
+  @include media-md {
+    padding: 0 $padding-md;
+  }
+}
+
+.inverse-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  background-color: color('white');
+}
+
+#cursor {
+  width: 64px;
+  height: 64px;
+  z-index: 300;
+  font-size: 64px;
+  position: fixed;
+  pointer-events: none;
+  color: color('white');
+  mix-blend-mode: difference;
+  transform: translate(-25%, -50%);
+  transform-origin: center center;
+  transition: transform 0.5s ease-out;
+  animation: pulse 3s forwards linear infinite;
+}

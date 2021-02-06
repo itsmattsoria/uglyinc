@@ -1,0 +1,60 @@
+// Home page
+
+.home {
+  .header {
+    margin-bottom: 100px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 10vw;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.flipped {
+      transform: scaleY(-1);
+    }
+  }
+
+  .frame {
+    margin: 0 auto;
+    max-width: 600px;
+
+    > .-inner {
+      height: 0;
+      position: relative;
+      padding-bottom: 127.2222%;
+      background-image: url('../images/frame.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    img {
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  p {
+    font-size: 18px;
+    max-width: 600px;
+    line-height: 1.5;
+    margin: 0 auto 1em;
+    text-align: justify;
+
+    @include media-md {
+      font-size: 24px;
+    }
+
+    &.smiley {
+      text-align: center;
+
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
